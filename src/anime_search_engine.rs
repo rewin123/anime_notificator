@@ -85,7 +85,8 @@ impl AnimeSearchEngine {
                 BigAnime {
                     name : anime_name,
                     desc : anime_desc,
-                    url : anime_url
+                    url : anime_url,
+                    episode : 0
                 }
             );
         }
