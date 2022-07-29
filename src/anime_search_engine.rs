@@ -29,8 +29,8 @@ impl Default for AnimeSearchEngine {
         let index_path = TempDir::new().unwrap();
     let mut scheme_builder = Schema::builder();
     scheme_builder.add_text_field("title", TEXT | STORED);
-    scheme_builder.add_text_field("desc", TEXT);
-    scheme_builder.add_text_field("url", TEXT);
+    scheme_builder.add_text_field("desc", TEXT | STORED);
+    scheme_builder.add_text_field("url", TEXT | STORED);
 
     let schema = scheme_builder.build();
 
