@@ -7,3 +7,11 @@ edition = "2021"
 
 [dependencies]
 tantivy = "*"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.8", features = ["full"] }
+regex = "*"
+indicatif = "*"
+tempfile = "*"
+serde_json = "*"
+serde = "*"
+teloxide = { version = "*", features = ["full"] }
