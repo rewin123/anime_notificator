@@ -1,6 +1,6 @@
 use std::{error::Error, ops::Index};
 
-use teloxide::{prelude::*, utils::command::{BotCommands}, dptree::deps};
+use teloxide::{prelude::*, utils::command::{BotCommands}, dptree::deps, types::InlineKeyboardButton};
 use anime_notificator::*;
 
 
@@ -91,6 +91,9 @@ async fn answer(
             bot.send_message(message.chat.id, Command::descriptions().to_string()).await?;
         }
         Command::Start => {
+
+            InlineKeyboardButton::callback(text, callback_data)
+
             bot.send_message(message.chat.id, Command::descriptions().to_string()).await?;
         }
         Command::FindOngoing(name) => {
